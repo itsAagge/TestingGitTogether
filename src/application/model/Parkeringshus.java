@@ -32,6 +32,17 @@ public class Parkeringshus {
         }
     }
 
+    public int  antalLedigePladser() {
+        int antalLedige = 0;
+        for (Parkeringsplads parkeringsplads : parkeringspladser) {
+            if (parkeringsplads.getBil() == null) {
+                antalLedige++;
+            }
+        }
+        return antalLedige;
+    }
+
+
     public String getAdresse() {
         return adresse;
     }
