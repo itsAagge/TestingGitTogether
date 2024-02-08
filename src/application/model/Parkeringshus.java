@@ -25,6 +25,15 @@ public class Parkeringshus {
         }
     }
 
+    public int findBilMedPlads(String regNummer) {
+        for (Parkeringsplads parkeringsplads : parkeringspladser) {
+            if (parkeringsplads.getBil().getRegNr().equals(regNummer)) {
+                return parkeringsplads.getNummer();
+            }
+        }
+        return -1;
+    }
+
     public void removeParkeringsPlads(Parkeringsplads parkeringsplads) {
         if(parkeringspladser.contains(parkeringsplads)) {
             parkeringspladser.remove(parkeringsplads);
